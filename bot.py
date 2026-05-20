@@ -59,15 +59,15 @@ async def attack(update: Update, context):
     user_id = update.effective_user.id
     
  if len(context.args) < 4:
-    await update.message.reply_text(
-        "❌ *Usage:*\n"
-        "`/attack <IP> <PORT> <DURATION> <METHOD>`\n\n"
-        "📝 *Example:*\n"
-        "`/attack 1.2.3.4 80 60 udp`\n\n"
-        "*Methods:* udp, tcp, udp\\_game, http, slowloris",
-        parse_mode="Markdown"
-    )
-    return
+        await update.message.reply_text(
+            "❌ *Usage:*\n"
+            "`/attack <IP> <PORT> <DURATION> <METHOD>`\n\n"
+            "📝 *Example:*\n"
+            "`/attack 1.2.3.4 80 60 udp`\n\n"
+            "*Methods:* udp, tcp, udp\\_game, http, slowloris",
+            parse_mode="Markdown"
+        )
+        return
     
     target_ip = context.args[0]
     target_port = context.args[1]
